@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: Verdana;
+}
+body{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.navbarInicial{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h1{
+    font-size: medium;
+    margin: 20px auto;
+    text-align: center;
+}
+.navbarInicial a{
+    background-color: #bdc13f;
+    color: black;
+    font-size: larger;
+    padding: 5px 10px;
+    margin: 20px 5px 0 5px;
+    border-radius: 20px;
+}
+.navbarInicial a:hover{
+    background-color: #fbff7f;
+    color: black;
+}
