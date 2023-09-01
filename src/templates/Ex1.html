@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Exercício 1</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <script src="../static/js/Ex1.js" defer></script>
+</head>
+<body>
+    <nav class="navbarGeral">
+        <a href="index.html"> Inicio </a>
+        <a href="Ex1.html"> Exercício 1</a>
+        <a href="Ex2.html"> Exercício 2</a>
+        <a href="Ex3.html"> Exercício 3</a>
+        <a href="Ex4.html"> Exercício 4</a>
+        <a href="Ex5.html"> Exercício 5</a>
+        <a href="Ex6.html"> Exercício 6</a>
+        <a href="Ex7.html"> Exercício 7</a>
+        </a>
+    </nav>
+    <form>
+        <!-- 1) Ao executar o script a aplicação deve solicitar a entrada do nome da pessoa. -->
+        <span for="nome"> Insira seu nome abaixo:</span><br/>
+        <input id="nome" name="nome" type="text"><br/>
+        <!-- 2) Na sequência a aplicação deve solicitar que seja informada a altura da pessoa em centímetros. -->
+        <span for="altura"> Insira sua altura abaixo:</span><br/>
+        <input id="altura" name="altura" type="number"> <span> cm</span><br/>
+        <!-- 3) Na sequência a aplicação deve solicitar que seja informado o peso da pessoa. -->
+        <span for="peso"> Insira seu peso abaixo:</span><br/>
+        <input id="peso" name="peso" type="number"> <span> kg</span><br/>
+        <input id="massaCorporal" type="submit" value="Enviar" >
+    </form>
+    <p id="resultadoMassaCorporal">Aqui aparecerá o resultado</p>
+</body>
+</html>
