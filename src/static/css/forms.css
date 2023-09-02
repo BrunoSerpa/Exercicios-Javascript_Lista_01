@@ -2,10 +2,9 @@ form{
     margin: 30px 50px;
     width: 100%;
 }
-form *{
+input{
     margin-bottom: 30px;
 }
-form input{margin-top: 5px;}
 input[type="submit"]{
     background-color: #bdc13f;
     border: 0;
@@ -15,5 +14,95 @@ input[type="submit"]{
     border-radius: 15px;
 }
 input[type="submit"]:hover{
+    background-color: #fbff7f;
+}
+
+/* INPUT RADIO */
+input[type="radio"]{
+    appearance: none;
+    vertical-align: top;
+    font: inherit;
+    color: currentColor;
+    width: 17px;
+    height: 17px;
+    border: 0.20em solid #bdc13f;
+    border-radius: 50%;
+}
+input[type="radio"]:checked{
+    appearance: none;
+    background-color: #bdc13f;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15 em;
+    height: 1.15em;
+    border: 0.15em solid #bdc13f;
+    border-radius: 50%;
+}
+
+input[type="radio"]:hover{
+    background-color: #fbff7f;
+    border-color: #fbff7f;   
+}
+input[type="radio"]:checked:hover{
+    background-color: #bdc13f;
+    border-color: #bdc13f;
+}
+
+/* SELECT */
+.select {
+    position: relative;
+}
+  
+.select select {
+    display: none;
+}
+
+.select-selected {
+    background-color: #bdc13f;
+}
+
+/* Seta */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    border: 6px solid transparent;
+    border-color: black transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent black transparent;
+    top: 7px;
+}
+
+/* Estilo, Opções*/
+.select-items div,.select-selected {
+    color: black;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.select-items div{
+    border-top-color: #fbff7f;
+}
+
+.select-items {
+    position: absolute;
+    background-color: #bdc13f;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Após selecionado, as outras opções */
+.select-hide {
+    display: none;
+}
+
+/* Hover */
+.select-items div:hover, .same-as-selected {
     background-color: #fbff7f;
 }
