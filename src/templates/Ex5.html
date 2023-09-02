@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <script src="../static/js/Ex5.js" defer></script>
+    <script src="../static/js/forms.js" defer></script>
+</head>
+<body>
+    <nav class="navbarGeral">
+        <a href="index.html"> Inicio </a>
+        <a href="Ex1.html"> Exercício 1</a>
+        <a href="Ex2.html"> Exercício 2</a>
+        <a href="Ex3.html"> Exercício 3</a>
+        <a href="Ex4.html"> Exercício 4</a>
+        <a href="Ex5.html"> Exercício 5</a>
+        <a href="Ex6.html"> Exercício 6</a>
+        <a href="Ex7.html"> Exercício 7</a>
+        </a>
+    </nav>
+    <form>
+        <!-- 5. Sabendo que uma rede hoteleira deseja informatizar sua folha de pagamento, desenvolva em pseudocódigo uma solução conforme regras apresentadas pela empresa, de acordo com as especificações abaixo: O funcionário possui os seguintes dados de entrada:
+        Faça um algoritmo que: - Leia as informações dos funcionários: código (inteiro), número de horas trabalhadas (inteiro) no mês, turno (caractere) e categoria (caractere). Não leia somente o valor da hora trabalhada (real), pois será calculada. - Considere sempre a digitação de uma única letra para representar o turno de trabalho e a categoria do funcionário, conforme as tabelas: -->
+        <!-- o código -->
+        <span for="codigoFG"> Insira o Código:</span><br/>
+        <input id="codigoFG" name="codigoFG" type="number"> <br/>
+        <!-- o número de horas trabalhadas no mês-->
+        <span for="horasTrabalhadas"> Insira o número de horas trabalhadas no mês:</span><br/>
+        <input id="horasTrabalhadas" name="horasTrabalhadas" type="number"><br/>
+        <!-- o valor do salário mínimo-->
+        <span for="salarioMinimo"> Insira o valor do salário mínimo:</span><br/>
+        <input id="salarioMinimo" name="salarioMinimo" type="number"><br/>
+        <!-- turno de trabalho (M – matutino, V – vespertino ou N – noturno) -->
+        <span for="turno"> Selecione o turno:</span><br/>
+        <div class="select" style="width:200px;">
+            <select id="turno" name="turno">
+                <option value="M" selected>matutino</option>
+                <option value="M">matutino</option>
+                <option value="V">vespertino</option>
+                <option value="N">noturno</option>
+            </select>
+        </div><br/>
+        <!-- categoria (F – funcionário, G – gerente) -->
+        <span for="categoria"> Selecione a categoria:</span><br/>
+        <input id="categoria1" name="categoria" value="F" type="radio" checked> <span for="categoria1">funcionário</span> 
+        <input id="categoria2" name="categoria" value="G" type="radio"> <span for="categoria2">gerente</span> <br/>
+        <input id="hoteleira" type="submit" value="Enviar" >
+    </form>
+    <p id="resultadoHoteleira">Aqui aparecerá o resultado</p>
+</html>
