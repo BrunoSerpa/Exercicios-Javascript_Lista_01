@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <script src="../static/js/Ex7.js" defer></script>
+    <script src="../static/js/forms.js" defer></script>
+</head>
+<body>
+    <nav class="navbarGeral">
+        <a href="index.html"> Inicio </a>
+        <a href="Ex1.html"> Exercício 1</a>
+        <a href="Ex2.html"> Exercício 2</a>
+        <a href="Ex3.html"> Exercício 3</a>
+        <a href="Ex4.html"> Exercício 4</a>
+        <a href="Ex5.html"> Exercício 5</a>
+        <a href="Ex6.html"> Exercício 6</a>
+        <a href="Ex7.html"> Exercício 7</a>
+        </a>
+    </nav>
+    <form>
+        <!-- 7. Faça um script que receba uma data no formato “dd/mm/aaaa” e escreva a data por extenso. Dica: use a função “split” de uma string que quebra a string em pedaços dado um separador como argumento da função. Nesse caso, o separador é a barra (/) da data. Exemplo: Para a entrada “31/08/2012” deve ser escrito “31 de agosto de 2012”..” -->
+        <!-- a entrada de um número -->
+        <span for="data"> Insira uma data:</span><br/>
+        <input id="data" name="data" type="text"> <br/>
+        <input id="dataEscrita" type="submit" value="Enviar" >
+    </form>
+    <p id="resultadoDataEscrita">Aqui aparecerá o resultado</p>
+</html>

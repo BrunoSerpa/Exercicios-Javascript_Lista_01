@@ -1,0 +1,38 @@
+document.getElementById("dataEscrita").addEventListener("click", function(event) {
+    event.preventDefault();
+    
+    const data = document.getElementById("data").value;
+    let dataEscrita;
+    if (data.includes(" ")) dataEscrita = data.split(" ")
+    else if (data.includes("/")) dataEscrita = data.split("/")
+    else if (data.includes("-")) dataEscrita = data.split("-");
+    /* Verificação de Valores */
+    try {
+        if (data == "") return window.alert("Insira valores!");
+        else if (dataEscrita.some(numero => isNaN(parseInt(numero)))) return window.alert("Insira valores válidos!");
+        if (dataEscrita.length != 3) return window.alert("Insira a data em uma das estruturas legíveis:\ndd-mm-aaaa\ndd mm aaaa\ndd/mm/aaaa");
+        else if (parseInt(dataEscrita[0]) < 1 || parseInt(dataEscrita[0]) > 31) return window.alert("Insira um dia válido (De 1 a 31)!");
+        else if (parseInt(dataEscrita[1]) < 1 || parseInt(dataEscrita[1]) > 12) return window.alert("Insira um mês válido (De 1 a 12)!");
+
+    }
+    catch{
+        return window.alert("Insira valores válidos!")
+    }
+
+    let mes;
+    switch (parseInt(dataEscrita[1])) {
+        case 1: mes = "Janeiro"; break;
+        case 2: mes = "Fevereiro"; break;
+        case 3: mes = "Março";  break;
+        case 4: mes = "Abril"; break;
+        case 5: mes = "Maio"; break;
+        case 6: mes = "Junho"; break;
+        case 7: mes = "Julho"; break;
+        case 8: mes = "Agosto"; break;
+        case 9: mes = "Setembro"; break;
+        case 10: mes = "Outubro"; break;
+        case 11: mes = "Novembro"; break;
+        case 12: mes = "Dezembro"; break;
+    }
+    document.getElementById("resultadoDataEscrita").innerText = `A data escrita é: ${dataEscrita[0]} de ${mes} de ${dataEscrita[2]}`;
+});
