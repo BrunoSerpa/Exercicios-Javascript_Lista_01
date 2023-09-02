@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <script src="../static/js/Ex6.js" defer></script>
+    <script src="../static/js/forms.js" defer></script>
+</head>
+<body>
+    <nav class="navbarGeral">
+        <a href="index.html"> Inicio </a>
+        <a href="Ex1.html"> Exercício 1</a>
+        <a href="Ex2.html"> Exercício 2</a>
+        <a href="Ex3.html"> Exercício 3</a>
+        <a href="Ex4.html"> Exercício 4</a>
+        <a href="Ex5.html"> Exercício 5</a>
+        <a href="Ex6.html"> Exercício 6</a>
+        <a href="Ex7.html"> Exercício 7</a>
+        </a>
+    </nav>
+    <form>
+        <!-- 6. Crie uma aplicação para efetuar cálculo aritméticos de soma e subtração. -->
+        <!-- 1) a entrada de um número -->
+        <span for="num1"> Insira o primeiro número:</span><br/>
+        <input id="num1" name="num1" type="number"> <br/>
+        <!-- 1) a operação -->
+        <span for="operacao"> Insira a operação:</span><br/>
+        <!-- 2) (deve ser inserida pelo usuário de forma textual) -->
+        <input id="operacao" name="operacao" type="text"> <br/>
+        <!-- 1) o segundo número -->
+        <span for="num2"> Insira um segundo número:</span><br/>
+        <input id="num2" name="num2" type="number"> <br/>
+        <input id="calculadora" type="submit" value="Enviar" >
+    </form>
+    <p id="resultadoCalculadora">Aqui aparecerá o resultado</p>
+</html>
