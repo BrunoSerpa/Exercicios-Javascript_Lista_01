@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/forms.css">
+    <script src="../static/js/Ex4.js" defer></script>
+    <script src="../static/js/forms.js" defer></script>
+</head>
+<body>
+    <nav class="navbarGeral">
+        <a href="index.html"> Inicio </a>
+        <a href="Ex1.html"> Exercício 1</a>
+        <a href="Ex2.html"> Exercício 2</a>
+        <a href="Ex3.html"> Exercício 3</a>
+        <a href="Ex4.html"> Exercício 4</a>
+        <a href="Ex5.html"> Exercício 5</a>
+        <a href="Ex6.html"> Exercício 6</a>
+        <a href="Ex7.html"> Exercício 7</a>
+        </a>
+    </nav>
+    <form>
+        <!-- 4. Uma empresa do ramo metalmecânico está realizando uma pesquisa junto a transportadoras para verificar o preço do transporte de seus produtos que serão entregues a seus clientes em outros estados. Ao final da pesquisa, foi selecionada uma transportadora, com a qual foi fechado o transporte dos produtos. O cliente pode selecionar se quer a sua entrega com rastreamento ou não. Assim, deverá ser feita uma pergunta ao cliente. -->
+        <!-- Deseja rastreamento (S-Sim e N-Não)-->
+        <span for="rastreamento"> Deseja rastreamento?</span><br/>
+        <input id="rastreamento1" name="rastreamento" value="S" type="radio"> <span for="rastreamento1">Sim</span> 
+        <input id="rastreamento2" name="rastreamento" value="N" type="radio" checked> <span for="rastreamento2">Não</span><br/>
+        <!-- Três variáveis influenciam o valor do frete: -->
+        <!-- Número de Peças -->
+        <span for="numeroPecas"> Insira o número de peças:</span><br/>
+        <input id="numeroPecas" name="numeroPecas" type="number"><br/>
+        <!-- Região -->
+        <span for="regiao"> Insira a região:</span><br/>
+        <div class="select" style="width:200px;">
+        <select id="regiao" name="regiao">
+            <option value="1" selected>Sul</option>
+            <option value="1">Sul</option>
+            <option value="2">Sudeste</option>
+            <option value="3">Centro-oeste</option>
+        </select>
+        </div><br/>
+        <!-- Distância em Quilômetros -->
+        <span for="distancia"> Insira a distância:</span><br/>
+        <input id="distancia" name="distancia" type="number"> <span>km</span><br/>
+        <!-- Valor do Litro -->
+        <span for="litro"> Insira o valor do litro:</span><br/>
+        <span>R$</span><input id="litro" name="litro" type="number"> <br/>
+        <input id="precoTransporte" type="submit" value="Enviar" >
+    </form>
+    <p id="resultadoPrecoTransporte">Aqui aparecerá o resultado</p>
+</html>
