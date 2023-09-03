@@ -3,17 +3,23 @@ document.getElementById("dataEscrita").addEventListener("click", function(event)
     
     const data = document.getElementById("data").value;
     let dataEscrita;
-    if (data.includes(" ")) dataEscrita = data.split(" ")
-    else if (data.includes("/")) dataEscrita = data.split("/")
+    if (data.includes(" ")) dataEscrita = data.split(" ");
+    else if (data.includes("/")) dataEscrita = data.split("/");
     else if (data.includes("-")) dataEscrita = data.split("-");
+    
+    function validandoData(dia, mes, ano){
+        const anoBissexto = (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);
+        const diaValido = [0, 31, anoBissexto ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        // Verifica se o mês e o dia estão dentro dos limites
+        return mes >= 1 && mes <= 12 && dia >= 1 && dia <= diaValido[mes];
+    }
+    
     /* Verificação de Valores */
     try {
         if (data == "") return window.alert("Insira valores!");
         else if (dataEscrita.some(numero => isNaN(parseInt(numero)))) return window.alert("Insira valores válidos!");
         if (dataEscrita.length != 3) return window.alert("Insira a data em uma das estruturas legíveis:\ndd-mm-aaaa\ndd mm aaaa\ndd/mm/aaaa");
-        else if (parseInt(dataEscrita[0]) < 1 || parseInt(dataEscrita[0]) > 31) return window.alert("Insira um dia válido (De 1 a 31)!");
-        else if (parseInt(dataEscrita[1]) < 1 || parseInt(dataEscrita[1]) > 12) return window.alert("Insira um mês válido (De 1 a 12)!");
-
+        else if (!validandoData(parseInt(dataEscrita[0]), parseInt(dataEscrita[1]), parseInt(dataEscrita[2]))) return window.alert("Insira uma data válida!");
     }
     catch{
         return window.alert("Insira valores válidos!")
